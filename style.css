@@ -1,56 +1,72 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: a;
-    width: 700px;
-    height: 800px;
-    border-radius: 10px;
-    justify-content: space-around;
-    padding: 25px;
-    border: 10px solid black;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container >div{
-    height: 150px;
-    width: 150px;
-    background-color: rgb(32, 216, 155);
-    margin: 10px;
-    border-radius: 60px;
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+
+}
+.container{
+    height: 400px;
+    width: 400px;
+    background-color: lightcoral;
+    border-radius: 10px;
     
 }
+.cards, .card, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+
+    height: calc(100% / 4 - 10px);
+    width : calc(100% / 4 - 10px);
+}
+.cards{
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.card .front-view img{
+    display: none;
+}
+.card .back-view img{
+    max-width: 70px;
+}
 #monkey{
-    height: 100px;
-    margin: 25px;
-    width: 100px;
-    border-radius: 60px;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
 }
 #sponge{
-    height: 100px;
-    margin: 25px;
-    width: 100px;
-    border-radius: 60px;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
 }
-#jerrymouse{
-    height: 100px;
-    margin: 25px;
-    width: 100px;
-    border-radius: 60px;
+#jerry{
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
 }
 #tom{
-    height: 100px;
-    margin: 25px;
-    width: 100px;
-    border-radius: 60px;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
 }
 #callmonkey{
-    height: 100px;
-    margin: 25px;
-    width: 100px;border-radius: 60px;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
 }
 #patrick{
-    height: 100px;
-    margin: 25px;
-    width: 100px;
-    border-radius: 60px;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
 }
