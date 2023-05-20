@@ -15,36 +15,41 @@
     width: 150px;
     background-color: rgb(32, 216, 155);
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 60px;
     
 }
 #monkey{
     height: 100px;
     margin: 25px;
     width: 100px;
+    border-radius: 60px;
 }
-#elephant{
+#sponge{
     height: 100px;
     margin: 25px;
     width: 100px;
+    border-radius: 60px;
 }
-#gazelle{
+#jerrymouse{
     height: 100px;
     margin: 25px;
     width: 100px;
+    border-radius: 60px;
 }
-#tiger{
+#tom{
     height: 100px;
     margin: 25px;
     width: 100px;
+    border-radius: 60px;
 }
 #callmonkey{
     height: 100px;
     margin: 25px;
-    width: 100px;
+    width: 100px;border-radius: 60px;
 }
-#shark{
+#patrick{
     height: 100px;
     margin: 25px;
     width: 100px;
+    border-radius: 60px;
 }
