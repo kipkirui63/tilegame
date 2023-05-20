@@ -13,8 +13,38 @@
 .container >div{
     height: 150px;
     width: 150px;
-    background-color: aquamarine;
+    background-color: rgb(32, 216, 155);
     margin: 10px;
     border-radius: 10px;
     
+}
+#monkey{
+    height: 100px;
+    margin: 25px;
+    width: 100px;
+}
+#elephant{
+    height: 100px;
+    margin: 25px;
+    width: 100px;
+}
+#gazelle{
+    height: 100px;
+    margin: 25px;
+    width: 100px;
+}
+#tiger{
+    height: 100px;
+    margin: 25px;
+    width: 100px;
+}
+#callmonkey{
+    height: 100px;
+    margin: 25px;
+    width: 100px;
+}
+#shark{
+    height: 100px;
+    margin: 25px;
+    width: 100px;
 }
