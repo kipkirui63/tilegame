@@ -1,0 +1,33 @@
+.container{
+    display: ;
+    flex-wrap: wrap;
+    background-color: blue;
+    width: 100%;
+    height: 800px;
+    border-radius: 10px;
+}
+.container >div{
+    height: 150px;
+    width: 200px;
+    background-color: aquamarine;
+    margin: 10px;
+}
+#row1{
+    display: flex;
+    height: 150px;
+    width: 200px;
+    background-color: aquamarine;
+    margin: 10px;
+}
+#row2{
+    display: flex;
+    height: 150px;
+    width: 200px;
+    background-color: aquamarine;
+}
+#row3{
+    display: flex;
+    height: 150px;
+    width: 200px;
+    background-color: aquamarine;
+}
