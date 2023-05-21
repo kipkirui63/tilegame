@@ -17,56 +17,98 @@ body{
     width: 400px;
     background-color: lightcoral;
     border-radius: 10px;
+    padding: 20px;
     
 }
-.cards, .card, .view{
+.cards .card .view{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cards{
-
-    height: calc(100% / 4 - 10px);
-    width : calc(100% / 4 - 10px);
+.cards, .card, .view{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    box-shadow: 2px 9px 3px rgba(0, 0,0, 1);
+    
 }
 .cards{
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
-.card .front-view img{
-    display: none;
+.cards .card{
+    cursor: pointer;
+    position: ;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    transition: transform 0.25s linear;
+    height: calc(100% / 4 - 10px);
+    width : calc(100% / 4 - 10px);
 }
+.cards, .card, .back-view,.front-view{
+    height: 100%;
+    width: 100%;
+    background-color: lightgreen;
+    transform-style: preserve-3d;
+}
+
+.card .front-view{
+    transform: rotateY(-180deg)
+}
+.card .back-view{
+    transform: rotateY(180deg)
+}
+.front-view span{
+    color: gold;
+    font-size: 40px;
+}
+.card:hover .front-view{
+    transform: rotateY(0);
+}
+.card:hover .back-view{
+    transform: rotateY(0);
+}
+
 .card .back-view img{
-    max-width: 70px;
+    max-width: 90px;
+}
+.material-icons{
+    height: 30px;
+    width: 30px;
 }
 #monkey{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
 }
 #sponge{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
 }
 #jerry{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
 }
 #tom{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
 }
 #callmonkey{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
 }
 #patrick{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
 }
