@@ -54,7 +54,6 @@ body{
 .cards, .card, .back-view,.front-view{
     height: 100%;
     width: 100%;
-    background-color: lightgreen;
     transform-style: preserve-3d;
 }
 
@@ -77,10 +76,6 @@ body{
 
 .card .back-view img{
     max-width: 90px;
-}
-.material-icons{
-    height: 30px;
-    width: 30px;
 }
 #monkey{
     height: 30px;
