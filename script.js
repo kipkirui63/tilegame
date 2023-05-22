@@ -77,6 +77,26 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
+function restartGame() {
+    boxes.forEach(box => {
+      box.classList.remove('flip');
+      box.addEventListener('click', flipBox);
+    });
+  
+    resetBoard();
+  
+    moveCount = 0;
+    moveCountElement.textContent = moveCount;
+  updateStarRating();
+
+  stopTimer();
+  seconds = 0;
+  minutes = 0;
+  timerElement.textContent = '00:00';
+
+  // Start timer
+  startTimer();
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 

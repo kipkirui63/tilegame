@@ -9,8 +9,14 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: aqua;
+    background-color: darkblue;
 
+}
+h1{
+    height: 10px;
+    text-align: center;
+    font-style: italic;
+    
 }
 .container{
     height: 400px;
