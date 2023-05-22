@@ -53,6 +53,9 @@ function flipBox() {
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+  if (firstCard.dataset.framework == secondCard.dataset.framework){
+    alert("Match")
+  }
 
   isMatch ? disableCards() : unflipCards();
 }
