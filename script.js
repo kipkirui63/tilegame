@@ -1,8 +1,13 @@
 const cards = document.querySelectorAll('.card');
+const timerElement =  document.getElementById('timer');
+
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let moveCount = 0;
+let seconds = 0;
+let minutes = 0;
 
 const moveCountElement = document.getElementById('move-counter');
 
@@ -92,12 +97,43 @@ function restartGame() {
   stopTimer();
   seconds = 0;
   minutes = 0;
+  updateTimer();
   timerElement.textContent = '00:00';
 
-  // Start timer
   startTimer();
 }
+function startTimer() {
+    timer = setInterval(() => {
+      seconds++;
+      if (seconds === 60) {
+        minutes++;
+        seconds = 0;
+      }
+      updateTimer();
+    }, 1000);
+  }
+  
+  function stopTimer() {
+    clearInterval(timer);
+  }
+  
+  function updateTimer() {
+    const formattedMinutes = padTime(minutes);
+    const formattedSeconds = padTime(seconds);
+    timerElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
+  }
+  
+  function padTime(time) {
+    return time < 10 ? `0${time}` : time;
+  }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+
+
+
+
+
 
 

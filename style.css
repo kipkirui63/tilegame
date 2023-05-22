@@ -24,6 +24,7 @@ h1{
     background-color: lightcoral;
     border-radius: 10px;
     padding: 20px;
+    align-self: center ;
     
 }
 .cards, .card, .view{
@@ -156,6 +157,10 @@ h1{
     transform: perspective(800px) rotateY(0);
 }
 #move-counter{
-    padding: 20px;
+   
+}
+#restart-button{
+    text-align: center;
+
 }
 
