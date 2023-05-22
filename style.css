@@ -163,4 +163,10 @@ h1{
     text-align: center;
 
 }
-
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
