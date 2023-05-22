@@ -156,17 +156,24 @@ h1{
 .cards .card.flipped .back-view {
     transform: perspective(800px) rotateY(0);
 }
-#move-counter{
+.moves{
+    padding: 10px;
+    padding-bottom: 150px;
+    font-size: 25px;
    
 }
-#restart-button{
-    text-align: center;
+.restart button{
+    color: palevioletred;
+    margin-top: 100px;
+    /* margin-left: -40px; */
 
+    
 }
-#timer {
-    font-size: 30px;
+.timer {
+    font-size: 20px;
     font-weight: bold;
     color: #000;
     margin-bottom: 10px;
+    /* margin-left: -90px; */
   }
   

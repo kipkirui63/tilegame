@@ -1,15 +1,20 @@
 const cards = document.querySelectorAll('.card');
-const timerElement =  document.getElementById('timer');
+const timerElement =  document.getElementById('.timer');
+const movesLabel = document.querySelector('.moves');
+
 
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let moveCount = 0;
+let moves = 0;
 let seconds = 0;
 let minutes = 0;
 
-const moveCountElement = document.getElementById('move-counter');
+/*const moveCountElement = document.getElementById('move-counter');*/
+
+
+
 
 function flipCard() {
   if (lockBoard) return;
@@ -41,8 +46,7 @@ function flipBox() {
     }
   }
   function incrementMoveCount() {
-    moveCount++;
-    document.getElementById('move-count').textContent = moveCount;
+   
   }
   
   
@@ -58,6 +62,7 @@ function disableCards() {
   secondCard.removeEventListener('click', flipCard);
 
   resetBoard();
+  
 }
 
 function unflipCards() {
@@ -69,6 +74,8 @@ function unflipCards() {
 
     resetBoard();
   }, 1500);
+  moves++;
+  movesLabel.textContent = moves;
 }
 
 function resetBoard() {
@@ -83,15 +90,15 @@ function resetBoard() {
   });
 })();
 function restartGame() {
-    boxes.forEach(box => {
-      box.classList.remove('flip');
-      box.addEventListener('click', flipBox);
+    cards.forEach(card => {
+      card.classList.remove('flip');
+      card.addEventListener('click', flipCard);
     });
   
     resetBoard();
   
-    moveCount = 0;
-    moveCountElement.textContent = moveCount;
+    movesLabel = 0;
+    moveLabelElement.textContent = moveCount;
   updateStarRating();
 
   stopTimer();
@@ -126,6 +133,12 @@ function startTimer() {
   function padTime(time) {
     return time < 10 ? `0${time}` : time;
   }
+  function restartGame(){
+    stopTimer();
+    movesLabel = 0
+    document.querySelector('.moves').textContent = movesLabel;
+    document.querySelector('.timer').textContent = timerElement;
+  };
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
