@@ -11,15 +11,13 @@ let moves = 0;
 let seconds = 0;
 let minutes = 0;
 
-/*const moveCountElement = document.getElementById('move-counter');*/
 
 
 
 
 function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
-
+  if (lockBoard) return;/**user dont interact with other cards */
+  if (this === firstCard) return;/**if same does nothing */
   this.classList.add('flipped');
 
   if (!hasFlippedCard) {
@@ -45,9 +43,9 @@ function flipBox() {
       incrementMoveCount();
     }
   }
-  function incrementMoveCount() {
+//   function incrementMoveCount() {
    
-  }
+//   }
   
   
 
@@ -142,6 +140,16 @@ function startTimer() {
     document.querySelector('.moves').textContent = movesLabel;
     document.querySelector('.timer').textContent = timerElement;
   };
+
+  function checkWinCondition() {
+    const matchedBoxes = document.querySelectorAll('.flip');
+    if (matchedCards.length === cards.length) {
+      stopTimer(); // Stop the timer when all boxes are matched
+      setTimeout(() => {
+        alert('Congratulations! Game Over.');
+    }, 500);
+    }
+  }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
